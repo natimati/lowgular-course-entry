@@ -1,0 +1,8 @@
+<div *ngIf="data$ | async as data; else empty" style="display: flex; flex-direction: row">
+  <div style="display: flex; flex-direction: column; width: fit-content" *ngFor="let employee of data">
+    <img alt="employee face" style="height: 300px; margin-right: 10px" src='{{employee.image}}' >
+    <p>{{employee.name}}</p>
+  </div>
+</div>
+
+<ng-template #empty> There is no data </ng-template>
