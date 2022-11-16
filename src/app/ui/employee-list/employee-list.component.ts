@@ -10,7 +10,7 @@ import {PersonModel} from "../../model/person.model";
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class EmployeeListComponent {
-  constructor(private _employeeService: EmployeeService) { }
+  constructor(private _employeeService: EmployeeService) {}
   data$: Observable<PersonModel[] | null> = this._employeeService.getAll();
 
 }
