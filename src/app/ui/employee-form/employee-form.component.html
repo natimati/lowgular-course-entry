@@ -1,8 +1,8 @@
-<form [formGroup]="employeeForm">
- <input type='text' formControlName='name' placeholder='Name'>
+<form [formGroup]="employeeForm" (ngSubmit)="onButtonClick(employeeForm.value)">
+ <input type='text' formControlName='email' placeholder='Email'>
   <input type='number' formControlName='age' placeholder='Age'>
   <input type="number" formControlName="salary" placeholder="Salary">
-  <input type='submit' value="submit" [disabled]="employeeForm.invalid">
+  <input type='submit' value="submit" [disabled]="employeeForm.invalid" >
 </form>
 
 <div *ngIf="employeeForm.valid">
