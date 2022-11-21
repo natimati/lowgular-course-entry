@@ -15,4 +15,7 @@ export class EmployeeService {
     return this._httpClient.post('https://dummy.restapiexample.com/create', employee)
   }
 
+  delete(id: string): Observable<Object> {
+    return this._httpClient.delete('https://dummy.restapiexample.com/delete/' + id)
+  }
 }
